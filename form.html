@@ -5,6 +5,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="style.css" />
 		<title>PUP Forms</title>
+	<script>
+        function submitForm() {
+            var form = document.forms["data"];
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", form.action);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === XMLHttpRequest.DONE) {
+                    if (xhr.status === 200) {
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.result === 'success') {
+                            alert('Data successfully added!');
+                            form.reset(); // Reset the form after successful submission
+                        } else {
+                            alert('An error occurred: ' + response.error);
+                        }
+                    } else {
+                        alert('An error occurred while submitting the form.');
+                    }
+                }
+            };
+            xhr.send(new FormData(form));
+        }
+    </script>
 	</head>
 
 	<body>
