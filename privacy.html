@@ -13,7 +13,7 @@
 				<img src="assets/logo.png" alt="puplogo" class="logo" />
 				<div class="logo-title">
 					<h1>
-						POLYTECHNIC UNIVERSITY OF<br>
+						POLYTECHNIC UNIVERSITY OF<br />
 						THE PHILIPPINES
 					</h1>
 					<h3>The Country’s First Polytechnic University</h3>
@@ -28,64 +28,69 @@
 			</div>
 		</div>
 
-
 		<div class="privacy-content">
-			<h1>
-				Privacy Policy <br />
-			</h1>
-			<p>     Polytechnic University of the Philippines (PUP), we are committed to 
-				protecting your privacy and safeguarding your personal information.
-				This policy outlines how we collect, use, and protect your data.
+			<h1>Privacy Policy</h1>
+			<p>
+				Polytechnic University of the Philippines (PUP), we are committed to
+				protecting your privacy and safeguarding your personal information. This
+				policy outlines how we collect, use, and protect your data.
 				<br /><br />
 			</p>
 
 			<h3>Information We Collect</h3>
-			<p>We may collect personal information such as your name, contact details,
+			<p>
+				We may collect personal information such as your name, contact details,
 				and details of your Parent or Guardian incase of emergencies.
 				<br /><br />
 			</p>
 
 			<h3>How We Use Your Information</h3>
-			<p>We use your information for authentication purposes to process your new/replacement ID. 
-				This includes enrolled course, student number, and other information.
-				<br /><br />
+			<p>
+				We use your information for authentication purposes to process your
+				new/replacement ID. This includes enrolled course, student number, and
+				other information.
 			</p>
 
 			<h3>Data Security</h3>
-			<p>We implement security measures to protect your information from unauthorized access, use, or disclosure.
-				<br /><br />
+			<p>
+				We implement security measures to protect your information from
+				unauthorized access, use, or disclosure. <br /><br />
 			</p>
 
 			<h3>Your Rights</h3>
-			<p>You have the right to access, correct, or delete your information. For inquiries or concerns about your data, please contact us.
-				<br /><br />
+			<p>
+				You have the right to access, correct, or delete your information. For
+				inquiries or concerns about your data, please contact us. <br /><br />
 			</p>
 
 			<h3>Contact Us</h3>
-			<p>If you have questions or concerns about our privacy practices, please reach out to us by clicking this >
+			<p>
+				If you have questions or concerns about our privacy practices, please
+				reach out to us by clicking this >
 				<a href="https://www.pup.edu.ph/about/contactus">Contact Us</a>
 				<br /><br />
 			</p>
 
 			<div class="approval">
 				<h5>
-				<input type="checkbox" id="agreeCheckbox" name="agreeCheckbox">
-				<label for="agreeCheckbox">Check the box if you Accept with our Privacy Policy</label>
-				<button onclick="proceedToForm()">Proceed</button>
+					<input type="checkbox" id="agreeCheckbox" name="agreeCheckbox" />
+					<label for="agreeCheckbox"
+						>Check the box if you Accept with our Privacy Policy</label>
+					<button onclick="proceedToForm()">Proceed</button>
 				</h5>
 			</div>
 		</div>
 	</body>
 
-<script>
-    function proceedToForm() {
-        if (document.getElementById('agreeCheckbox').checked) {
-            window.location.href = 'form.html';
-        } else {
-            alert('Please agree to proceed.');
-        }
-    }
-</script>
+	<script>
+		function proceedToForm() {
+			if (document.getElementById("agreeCheckbox").checked) {
+				window.location.href = "form.html";
+			} else {
+				alert("Please agree to proceed.");
+			}
+		}
+	</script>
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
 			var content = document.querySelector(".content");
