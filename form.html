@@ -213,36 +213,5 @@
 				</div>
 			</form>
 		</div>
-
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				var modal = document.getElementById("myModal");
-				var proceedBtn = document.getElementById("proceedBtn");
-				var reasonRadios = document.querySelectorAll(".reason");
-				var academicLevelRadios = document.querySelectorAll(".academic-level");
-
-				function checkSelection() {
-					var reasonSelected = Array.from(reasonRadios).some(
-						(radio) => radio.checked
-					);
-					var academicLevelSelected = Array.from(academicLevelRadios).some(
-						(radio) => radio.checked
-					);
-					proceedBtn.disabled = !(reasonSelected && academicLevelSelected);
-				}
-
-				reasonRadios.forEach(function (radio) {
-					radio.addEventListener("change", checkSelection);
-				});
-
-				academicLevelRadios.forEach(function (radio) {
-					radio.addEventListener("change", checkSelection);
-				});
-
-				proceedBtn.addEventListener("click", function () {
-					modal.style.display = "none";
-				});
-			});
-		</script>
 	</body>
 </html>
