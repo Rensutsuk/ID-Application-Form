@@ -113,7 +113,7 @@
     </div>
 
      <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
         var proceedBtn = document.getElementById("proceedBtn");
         var reasonCheckboxes = document.querySelectorAll('.reason');
         var academicLevelCheckboxes = document.querySelectorAll('.academic-level');
@@ -131,9 +131,7 @@
         academicLevelCheckboxes.forEach(function(checkbox) {
             checkbox.addEventListener('change', checkSelection);
         });
-
-            modal.style.display = "block";
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
