@@ -7,9 +7,32 @@
 		<title>PUP Forms</title>
 	</head>
 	<body>
-		<form id="myModal" class="modal" 
-			method="post"
-			action="https://script.google.com/macros/s/AKfycbxfZjCb0Qn-dZ8XEY1ED2uK1LTLJ_tujPvUwiKvohj6KbgKYpnFBOzXhaG7M8BbLqu-/exec">
+
+		<div class="navbar">
+			<div class="logo-head">
+				<img src="assets/logo.png" alt="puplogo" class="logo" />
+				<div class="logo-title">
+					<h1>
+						POLYTECHNIC UNIVERSITY OF<br />
+						THE PHILIPPINES
+					</h1>
+					<h3>The Country’s First Polytechnic University</h3>
+				</div>
+			</div>
+			<div class="nav-links">
+				<h2>
+					<a href="index.html">HOME</a>
+					<a href="privacy.html">FORMS</a>
+					<a href="https://www.pup.edu.ph">PUP WEBSITE</a>
+				</h2>
+			</div>
+		</div>
+		<div class="application-form">
+			<form
+				method="post"
+				action="https://script.google.com/macros/s/AKfycbysOPPnibNfbCcX1OFE4sQJmhgHSbOm7ncRLKfYlYrHlJpHWaBjcDlcvlgx6eiVYALYuQ/exec"
+			>
+				<div id="myModal" class="modal">
 			<div class="modal-content">
 				<h2>APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
 				<br />
@@ -135,32 +158,7 @@
 
 				<button id="proceedBtn" disabled class="button">Proceed</button>
 			</div>
-		</form>
-
-		<div class="navbar">
-			<div class="logo-head">
-				<img src="assets/logo.png" alt="puplogo" class="logo" />
-				<div class="logo-title">
-					<h1>
-						POLYTECHNIC UNIVERSITY OF<br />
-						THE PHILIPPINES
-					</h1>
-					<h3>The Country’s First Polytechnic University</h3>
-				</div>
-			</div>
-			<div class="nav-links">
-				<h2>
-					<a href="index.html">HOME</a>
-					<a href="privacy.html">FORMS</a>
-					<a href="https://www.pup.edu.ph">PUP WEBSITE</a>
-				</h2>
-			</div>
 		</div>
-		<div class="application-form">
-			<form
-				method="post"
-				action="https://script.google.com/macros/s/AKfycbxfZjCb0Qn-dZ8XEY1ED2uK1LTLJ_tujPvUwiKvohj6KbgKYpnFBOzXhaG7M8BbLqu-/exec"
-			>
 				<div class="form-checkbox"></div>
 				<div class="form-information">
 					<font size="50" class="form-title" style="text-align: center"
@@ -213,6 +211,7 @@
 				</div>
 			</form>
 		</div>
+
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
 				var modal = document.getElementById("myModal");
