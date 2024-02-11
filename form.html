@@ -7,68 +7,6 @@
     <title>PUP Forms</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo-head">
-            <img src="assets/logo.png" alt="puplogo" class="logo" />
-            <div class="logo-title">
-                <h1>
-                    POLYTECHNIC UNIVERSITY OF<br />
-                    THE PHILIPPINES
-                </h1>
-                <h3>The Country’s First Polytechnic University</h3>
-            </div>
-        </div>
-        <div class="nav-links">
-            <h2>
-                <a href="index.html">HOME</a>
-                <a href="privacy.html">FORMS</a>
-                <a href="https://www.pup.edu.ph">PUP WEBSITE</a>
-            </h2>
-        </div>
-    </div>
-    <div class="application-form">
-        <form method="post" action="https://script.google.com/macros/s/AKfycbzoYf0qQ4e2fQwWqtkTuDZn81HD30OKQQ2bAs6QRjHAZXskXlYeaO456jFlusvn0fZT/exec">
-            <div class="form-checkbox"></div>
-            <div class="form-information">
-                <font size="50" class="form-title" style="text-align: center;">ID INFORMATION</font>
-                <label for="student-number">Student Number:</label>
-                <input type="text" name="student-number" id="student-number" required/>
-                <label for="first-name">First Name:</label>
-                <input type="text" name="first-name" id="first-name" required/>
-                <label for="middle-name">Middle Name:</label>
-                <input type="text" name="middle-name" id="middle-name" required/>
-                <label for="last-name">Last Name:</label>
-                <input type="text" name="last-name" id="last-name" required/>
-                <label for="gender">Gender:</label>
-                <select name="gender" id="gender" required>
-                    <option value="" disabled selected>Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
-                <label for="date-of-birth" required>Date of Birth:</label>
-                <input type="date" name="date-of-birth" id="date-of-birth" />
-                <label for="college" required>College:</label>
-                <input type="text" name="college" id="college" />
-                <label for="course-yr-sec" required>Course, Yr. & Section:</label>
-                <input type="text" name="course-yr-sec" id="course-yr-sec" />
-                <label for="address" required>Home Address:</label>
-                <input type="text" name="address" id="address" />
-                <label for="tel-no" required>Phone/Mobile No.:</label>
-                <input type="text" name="tel-no" id="tel-no" />
-                <label for="email" required>Email Address:</label>
-                <input type="email" name="email" id="email" />
-                <p>In case of emergency, please notify:<br /><br /></p>
-                <label for="em-name" required>Complete Name:</label>
-                <input type="text" name="em-name" id="em-name" />
-                <label for="em-tel-no" required>Phone/Mobile No.:</label>
-                <input type="text" name="em-tel-no" id="em-tel-no" />
-                <label for="em-address" required>Address:</label>
-                <input type="text" name="em-address" id="em-address" />
-            </div>
-            <input class="button" type="submit" />
-        </form>
-    </div>
-
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -100,41 +38,109 @@
             <label for="college-of-law">College of Law</label><br>
             <input type="checkbox" id="institute-of-technology" name="id-type" value="Institute of Technology">
             <label for="institute-of-technology">Institute of Technology</label><br>
-            <button id="proceedBtn">Proceed</button>
+            <button id="proceedBtn" disabled>Proceed</button>
         </div>
     </div>
 
-    <script>
-        var modal = document.getElementById("myModal");
-        var btn = document.getElementById("myBtn");
-        var span = document.getElementsByClassName("close")[0];
-        var proceedBtn = document.getElementById("proceedBtn");
+    <div class="navbar">
+        <div class="logo-head">
+            <img src="assets/logo.png" alt="puplogo" class="logo" />
+            <div class="logo-title">
+                <h1>
+                    POLYTECHNIC UNIVERSITY OF<br />
+                    THE PHILIPPINES
+                </h1>
+                <h3>The Country’s First Polytechnic University</h3>
+            </div>
+        </div>
+        <div class="nav-links">
+            <h2>
+                <a href="index.html">HOME</a>
+                <a href="privacy.html">FORMS</a>
+                <a href="https://www.pup.edu.ph">PUP WEBSITE</a>
+            </h2>
+        </div>
+    </div>
+    <div class="application-form">
+        <form method="post" action="https://script.google.com/macros/s/AKfycbzoYf0qQ4e2fQwWqtkTuDZn81HD30OKQQ2bAs6QRjHAZXskXlYeaO456jFlusvn0fZT/exec">
+            <div class="form-checkbox"></div>
+            <div class="form-information">
+                <font size="50" class="form-title" style="text-align: center;">ID INFORMATION</font>
+                <label for="student-number">Student Number:</label>
+                <input type="text" name="student-number" id="student-number" required/><br>
+                <label for="first-name">First Name:</label>
+                <input type="text" name="first-name" id="first-name" required/><br>
+                <label for="middle-name">Middle Name:</label>
+                <input type="text" name="middle-name" id="middle-name" required/><br>
+                <label for="last-name">Last Name:</label>
+                <input type="text" name="last-name" id="last-name" required/><br>
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select><br>
+                <label for="date-of-birth" required>Date of Birth:</label>
+                <input type="date" name="date-of-birth" id="date-of-birth" /><br>
+                <label for="college" required>College:</label>
+                <input type="text" name="college" id="college" /><br>
+                <label for="course-yr-sec" required>Course, Yr. & Section:</label>
+                <input type="text" name="course-yr-sec" id="course-yr-sec" /><br>
+                <label for="address" required>Home Address:</label>
+                <input type="text" name="address" id="address" /><br>
+                <label for="tel-no" required>Phone/Mobile No.:</label>
+                <input type="text" name="tel-no" id="tel-no" /><br>
+                <label for="email" required>Email Address:</label>
+                <input type="email" name="email" id="email" /><br>
+                <p>In case of emergency, please notify:</p>
+                <label for="em-name" required>Complete Name:</label>
+                <input type="text" name="em-name" id="em-name" /><br>
+                <label for="em-tel-no" required>Phone/Mobile No.:</label>
+                <input type="text" name="em-tel-no" id="em-tel-no" /><br>
+                <label for="em-address" required>Address:</label>
+                <input type="text" name="em-address" id="em-address" /><br>
+                <input class="button" type="submit" />
+            </div>
+        </form>
+    </div>
 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        window.onclick = function (event) {
-            if (event.target == modal) {
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var modal = document.getElementById("myModal");
+            var span = document.getElementsByClassName("close")[0];
+            var proceedBtn = document.getElementById("proceedBtn");
+
+            modal.style.display = "block"; // Show modal on page load
+
+            span.onclick = function () {
                 modal.style.display = "none";
             }
-        }
 
-       proceedBtn.onclick = function() {
-    var checkboxes = document.querySelectorAll('input[name="id-type"]:checked');
-    if (checkboxes.length === 0) {
-        alert("Please select at least one option.");
-        return;
-    }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
 
-    var selectedOptions = [];
-    checkboxes.forEach(function(checkbox) {
-        selectedOptions.push(checkbox.value);
-    });
+            proceedBtn.onclick = function() {
+                var checkboxes = document.querySelectorAll('input[name="id-type"]:checked');
+                if (checkboxes.length === 0) {
+                    alert("Please select at least one option.");
+                    return;
+                }
 
-}
+                // Proceed with the form submission
+                // Here, you may want to add your logic for form submission
+            }
+
+            // Enable the proceed button when at least one checkbox is checked
+            document.querySelectorAll('input[name="id-type"]').forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    var checkedCheckboxes = document.querySelectorAll('input[name="id-type"]:checked');
+                    proceedBtn.disabled = checkedCheckboxes.length === 0;
+                });
+            });
+        });
     </script>
 </body>
 </html>
