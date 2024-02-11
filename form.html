@@ -114,27 +114,25 @@
 
      <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var modal = document.getElementById("myModal");
-            var proceedBtn = document.getElementById("proceedBtn");
+        var proceedBtn = document.getElementById("proceedBtn");
+        var reasonCheckboxes = document.querySelectorAll('.reason');
+        var academicLevelCheckboxes = document.querySelectorAll('.academic-level');
+
+        function checkSelection() {
+            var reasonSelected = Array.from(reasonCheckboxes).some(checkbox => checkbox.checked);
+            var academicLevelSelected = Array.from(academicLevelCheckboxes).some(checkbox => checkbox.checked);
+            proceedBtn.disabled = !(reasonSelected && academicLevelSelected);
+        }
+
+        reasonCheckboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', checkSelection);
+        });
+
+        academicLevelCheckboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', checkSelection);
+        });
 
             modal.style.display = "block";
-
-            proceedBtn.onclick = function() {
-                var checkboxes = document.querySelectorAll('input[name="id-type"]:checked');
-                if (checkboxes.length === 0) {
-                    alert("Please select at least one option.");
-                    return;
-                }
-
-                modal.style.display = "none";
-            }
-
-            document.querySelectorAll('input[name="id-type"]').forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    var checkedCheckboxes = document.querySelectorAll('input[name="id-type"]:checked');
-                    proceedBtn.disabled = checkedCheckboxes.length === 0;
-                });
-            });
         });
     </script>
 </body>
