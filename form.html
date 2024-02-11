@@ -9,10 +9,11 @@
 <body>
 <div id="myModal" class="modal">
     <div class="modal-content">
-        <h2 style="text-align: center">APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
-        <p style="text-align: center">Choose what applies:</p>
+       <h2 style="text-align: center; margin-bottom: 20px;">APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Choose what applies:</p>
 
-        <div class="reason-checkboxes">
+        <div class="reason-checkboxes" style="text-align: center;">
+            <label for="reason" style="font-weight: bold;">Reason:</label><br>
             <input type="checkbox" id="transferee" class="id-type" name="reason" value="Transferee">
             <label for="transferee" class="id-label">Transferee</label><br>
             <input type="checkbox" id="shiftee" class="id-type" name="reason" value="Shiftee">
@@ -27,7 +28,8 @@
             <label for="correction-of-entry" class="id-label">Correction of Entry</label><br>
         </div>
 
-        <div class="academic-level-checkboxes">
+        <div class="academic-level-checkboxes" style="text-align: center;">
+            <label for="academic-level" style="font-weight: bold;">Academic Level:</label><br>
             <input type="checkbox" id="lhs" class="id-type" name="academic-level" value="LHS">
             <label for="lhs" class="id-label">LHS</label><br>
             <input type="checkbox" id="shs" class="id-type" name="academic-level" value="SHS">
@@ -44,7 +46,7 @@
             <label for="institute-of-technology" class="id-label">Institute of Technology</label><br>
         </div>
 
-        <button id="proceedBtn" disabled>Proceed</button>
+        <button id="proceedBtn" disabled style="margin-top: 20px;">Proceed</button>
     </div>
 </div>
 
