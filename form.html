@@ -1,93 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="style.css" />
-		<title>PUP Forms</title>
-	</head>
 
-	<body>
-		<div class="navbar">
-			<div class="logo-head">
-				<img src="assets/logo.png" alt="puplogo" class="logo" />
-				<div class="logo-title">
-					<h1>
-						POLYTECHNIC UNIVERSITY OF<br />
-						THE PHILIPPINES
-					</h1>
-					<h3>The Country’s First Polytechnic University</h3>
-				</div>
-			</div>
-			<div class="nav-links">
-				<h2>
-					<a href="index.html">HOME</a>
-					<a href="privacy.html">FORMS</a>
-					<a href="https://www.pup.edu.ph">PUP WEBSITE</a>
-				</h2>
-			</div>
-		</div>
-		<div class="application-form">
-			<form
-				method="post"
-				action="https://script.google.com/macros/s/AKfycbzoYf0qQ4e2fQwWqtkTuDZn81HD30OKQQ2bAs6QRjHAZXskXlYeaO456jFlusvn0fZT/exec"
-			>
-				<div class="form-checkbox"></div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>PUP Forms</title>
+</head>
 
-				<div class="form-information">
-					<font size="50" class="form-title" style="text-align: center;">ID INFORMATION </font>
-					
-					<label for="student-number">Student Number:</label>
-					<input type="text" name="student-number" id="student-number" required/>
+<body>
+    <div class="navbar">
+        <div class="logo-head">
+            <img src="assets/logo.png" alt="puplogo" class="logo" />
+            <div class="logo-title">
+                <h1>
+                    POLYTECHNIC UNIVERSITY OF<br />
+                    THE PHILIPPINES
+                </h1>
+                <h3>The Country’s First Polytechnic University</h3>
+            </div>
+        </div>
+        <div class="nav-links">
+            <h2>
+                <a href="index.html">HOME</a>
+                <a href="privacy.html">FORMS</a>
+                <a href="https://www.pup.edu.ph">PUP WEBSITE</a>
+            </h2>
+        </div>
+    </div>
 
-					<label for="first-name">First Name:</label>
-					<input type="text" name="first-name" id="first-name" required/>
+    <!-- Button to open the pop-up form -->
+    <button onclick="openForm()">Open Application Form</button>
 
-					<label for="middle-name">Middle Name:</label>
-					<input type="text" name="middle-name" id="middle-name" required/>
+    <!-- Pop-up form -->
+    <div class="popup-form" id="popupForm">
+        <form method="post"
+            action="https://script.google.com/macros/s/AKfycbzoYf0qQ4e2fQwWqtkTuDZn81HD30OKQQ2bAs6QRjHAZXskXlYeaO456jFlusvn0fZT/exec">
+            <div class="form-checkbox">
+                <font size="50" class="form-title" style="text-align: center;">APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</font>
 
-					<label for="last-name">Last Name:</label>
-					<input type="text" name="last-name" id="last-name" required/>
+                <!-- Checkboxes -->
+                <input type="checkbox" id="transferee" name="transferee">
+                <label for="transferee">Transferee</label><br>
 
-					<label for="gender">Gender:</label>
-					<select name="gender" id="gender" required>
-						<option value="" disabled selected>Select Gender</option>
-						<option value="male">Male</option>
-						<option value="female">Female</option>
-					</select>
+                <input type="checkbox" id="shiftee" name="shiftee">
+                <label for="shiftee">Shiftee</label><br>
 
-					<label for="date-of-birth" required>Date of Birth:</label>
-					<input type="date" name="date-of-birth" id="date-of-birth" />
+                <input type="checkbox" id="lhs" name="lhs">
+                <label for="lhs">LHS</label><br>
 
-					<label for="college" required>College:</label>
-					<input type="text" name="college" id="college" />
+                <input type="checkbox" id="shs" name="shs">
+                <label for="shs">SHS</label><br>
 
-					<label for="course-yr-sec" required>Course, Yr. & Section:</label>
-					<input type="text" name="course-yr-sec" id="course-yr-sec" />
+                <input type="checkbox" id="graduate-school" name="graduate-school">
+                <label for="graduate-school">Graduate School</label><br>
 
-					<label for="address" required>Home Address:</label>
-					<input type="text" name="address" id="address" />
+                <input type="checkbox" id="late-filing" name="late-filing">
+                <label for="late-filing">Late Filing</label><br>
 
-					<label for="tel-no" required>Phone/Mobile No.:</label>
-					<input type="text" name="tel-no" id="tel-no" />
+                <input type="checkbox" id="damaged" name="damaged">
+                <label for="damaged">Damaged</label><br>
 
-					<label for="email" required>Email Address:</label>
-					<input type="email" name="email" id="email" />
+                <input type="checkbox" id="undergrad" name="undergrad">
+                <label for="undergrad">Undergrad</label><br>
 
-					<p>In case of emergency, please notify:<br /><br /></p>
+                <input type="checkbox" id="open-university" name="open-university">
+                <label for="open-university">Open University</label><br>
 
-					<label for="em-name" required>Complete Name:</label>
-					<input type="text" name="em-name" id="em-name" />
+                <input type="checkbox" id="old-id" name="old-id">
+                <label for="old-id">Old ID</label><br>
 
-					<label for="em-tel-no" required>Phone/Mobile No.:</label>
-					<input type="text" name="em-tel-no" id="em-tel-no" />
+                <input type="checkbox" id="correction-of-entry" name="correction-of-entry">
+                <label for="correction-of-entry">Correction of Entry</label><br>
 
-					<label for="em-address" required>Address:</label>
-					<input type="text" name="em-address" id="em-address" />
+                <input type="checkbox" id="college-of-law" name="college-of-law">
+                <label for="college-of-law">College of Law</label><br>
 
-					<input class="button" type="submit" />
-				</div>
-			</form>
-		</div>
-	</body>
+                <input type="checkbox" id="institute-of-technology" name="institute-of-technology">
+                <label for="institute-of-technology">Institute of Technology</label><br>
+            </div>
+
+            <input class="button" type="submit" />
+        </form>
+    </div>
+
+    <!-- JavaScript to control the pop-up form -->
+    <script>
+        function openForm() {
+            document.getElementById("popupForm").style.display = "block";
+        }
+    </script>
+</body>
+
 </html>
