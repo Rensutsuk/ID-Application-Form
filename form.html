@@ -128,12 +128,8 @@
                     alert("Please select at least one option.");
                     return;
                 }
-
-                // Proceed with the form submission
-                // Here, you may want to add your logic for form submission
             }
 
-            // Enable the proceed button when at least one checkbox is checked
             document.querySelectorAll('input[name="id-type"]').forEach(function(checkbox) {
                 checkbox.addEventListener('change', function() {
                     var checkedCheckboxes = document.querySelectorAll('input[name="id-type"]:checked');
