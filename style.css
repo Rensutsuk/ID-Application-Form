@@ -257,46 +257,27 @@ body::before {
   background-color: var(--secondary-dark);
 }
 
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
-}
-
 .modal-content {
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; 
+    width: 60%;
+    border-radius: 10px;
+}
+
+.reason-checkboxes,
+.academic-level-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .id-type {
-    display: inline-block;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    /* Additional styles for checkboxes */
+    margin-right: 10px;
 }
 
 .id-label {
+    margin-right: 20px;
     font-size: 16px;
-
-}
-
-.modal-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.modal-content .id-type,
-.modal-content .id-label {
-    width: calc(25% - 20px);
 }
