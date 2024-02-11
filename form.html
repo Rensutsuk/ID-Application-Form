@@ -1,165 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>PUP Forms</title>
-    <style>
-        .modal {
-            display: block;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.4);
-            padding-top: 60px;
-        }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>PUP Forms</title>
+	</head>
+	<body>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<h2>APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
+				<br />
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-        }
-    </style>
-</head>
-<body>
-<div id="myModal" class="modal">
-    <div class="modal-content">
-        <h2>APPLICATION FOR NEW / REPLACEMENT OF IDENTIFICATION CARD</h2>
-        <p>Choose what applies:</p>
+				<div class="reason-checkboxes">
+					<h3>Reason:</h3>
+					<input
+						type="radio"
+						id="transferee"
+						class="id-type reason"
+						name="reason"
+						value="Transferee"
+					/>
+					<label for="transferee" class="id-label">Transferee</label><br />
+					<input
+						type="radio"
+						id="shiftee"
+						class="id-type reason"
+						name="reason"
+						value="Shiftee"
+					/>
+					<label for="shiftee" class="id-label">Shiftee</label><br />
+					<input
+						type="radio"
+						id="late-filling"
+						class="id-type reason"
+						name="reason"
+						value="Late Filling"
+					/>
+					<label for="late-filling" class="id-label">Late Filling</label><br />
+					<input
+						type="radio"
+						id="damaged"
+						class="id-type reason"
+						name="reason"
+						value="Damaged"
+					/>
+					<label for="damaged" class="id-label">Damaged</label><br />
+					<input
+						type="radio"
+						id="old-id"
+						class="id-type reason"
+						name="reason"
+						value="Old ID"
+					/>
+					<label for="old-id" class="id-label">Old ID</label><br />
+					<input
+						type="radio"
+						id="correction-of-entry"
+						class="id-type reason"
+						name="reason"
+						value="Correction of Entry"
+					/>
+					<label for="correction-of-entry" class="id-label"
+						>Correction of Entry</label
+					><br />
+				</div>
 
-        <div class="reason-checkboxes">
-            <label for="reason" class="checkbox-group-label">Reason:</label><br>
-            <input type="checkbox" id="transferee" class="id-type reason" name="reason" value="Transferee">
-            <label for="transferee" class="id-label">Transferee</label><br>
-            <input type="checkbox" id="shiftee" class="id-type reason" name="reason" value="Shiftee">
-            <label for="shiftee" class="id-label">Shiftee</label><br>
-            <input type="checkbox" id="late-filling" class="id-type reason" name="reason" value="Late Filling">
-            <label for="late-filling" class="id-label">Late Filling</label><br>
-            <input type="checkbox" id="damaged" class="id-type reason" name="reason" value="Damaged">
-            <label for="damaged" class="id-label">Damaged</label><br>
-            <input type="checkbox" id="old-id" class="id-type reason" name="reason" value="Old ID">
-            <label for="old-id" class="id-label">Old ID</label><br>
-            <input type="checkbox" id="correction-of-entry" class="id-type reason" name="reason" value="Correction of Entry">
-            <label for="correction-of-entry" class="id-label">Correction of Entry</label><br>
-        </div>
+				<div class="academic-level-checkboxes">
+					<h3>Academic Level:</h3>
+					<input
+						type="radio"
+						id="lhs"
+						class="id-type academic-level"
+						name="academic-level"
+						value="LHS"
+					/>
+					<label for="lhs" class="id-label">LHS</label><br />
+					<input
+						type="radio"
+						id="shs"
+						class="id-type academic-level"
+						name="academic-level"
+						value="SHS"
+					/>
+					<label for="shs" class="id-label">SHS</label><br />
+					<input
+						type="radio"
+						id="graduate-school"
+						class="id-type academic-level"
+						name="academic-level"
+						value="Graduate School"
+					/>
+					<label for="graduate-school" class="id-label">Graduate School</label
+					><br />
+					<input
+						type="radio"
+						id="undergrad"
+						class="id-type academic-level"
+						name="academic-level"
+						value="Undergrad"
+					/>
+					<label for="undergrad" class="id-label">Undergrad</label><br />
+					<input
+						type="radio"
+						id="open-university"
+						class="id-type academic-level"
+						name="academic-level"
+						value="Open University"
+					/>
+					<label for="open-university" class="id-label">Open University</label
+					><br />
+					<input
+						type="radio"
+						id="college-of-law"
+						class="id-type academic-level"
+						name="academic-level"
+						value="College of Law"
+					/>
+					<label for="college-of-law" class="id-label">College of Law</label
+					><br />
+					<input
+						type="radio"
+						id="institute-of-technology"
+						class="id-type academic-level"
+						name="academic-level"
+						value="Institute of Technology"
+					/>
+					<label for="institute-of-technology" class="id-label"
+						>Institute of Technology</label
+					><br />
+				</div>
 
-        <div class="academic-level-checkboxes">
-            <label for="academic-level" class="checkbox-group-label">Academic Level:</label><br>
-            <input type="checkbox" id="lhs" class="id-type academic-level" name="academic-level" value="LHS">
-            <label for="lhs" class="id-label">LHS</label><br>
-            <input type="checkbox" id="shs" class="id-type academic-level" name="academic-level" value="SHS">
-            <label for="shs" class="id-label">SHS</label><br>
-            <input type="checkbox" id="graduate-school" class="id-type academic-level" name="academic-level" value="Graduate School">
-            <label for="graduate-school" class="id-label">Graduate School</label><br>
-            <input type="checkbox" id="undergrad" class="id-type academic-level" name="academic-level" value="Undergrad">
-            <label for="undergrad" class="id-label">Undergrad</label><br>
-            <input type="checkbox" id="open-university" class="id-type academic-level" name="academic-level" value="Open University">
-            <label for="open-university" class="id-label">Open University</label><br>
-            <input type="checkbox" id="college-of-law" class="id-type academic-level" name="academic-level" value="College of Law">
-            <label for="college-of-law" class="id-label">College of Law</label><br>
-            <input type="checkbox" id="institute-of-technology" class="id-type academic-level" name="academic-level" value="Institute of Technology">
-            <label for="institute-of-technology" class="id-label">Institute of Technology</label><br>
-        </div>
+				<button id="proceedBtn" disabled class="button">Proceed</button>
+			</div>
+		</div>
 
-        <button id="proceedBtn" disabled>Proceed</button>
-    </div>
-</div>
+		<div class="navbar">
+			<div class="logo-head">
+				<img src="assets/logo.png" alt="puplogo" class="logo" />
+				<div class="logo-title">
+					<h1>
+						POLYTECHNIC UNIVERSITY OF<br />
+						THE PHILIPPINES
+					</h1>
+					<h3>The Country’s First Polytechnic University</h3>
+				</div>
+			</div>
+			<div class="nav-links">
+				<h2>
+					<a href="index.html">HOME</a>
+					<a href="privacy.html">FORMS</a>
+					<a href="https://www.pup.edu.ph">PUP WEBSITE</a>
+				</h2>
+			</div>
+		</div>
+		<div class="application-form">
+			<form
+				method="post"
+				action="https://script.google.com/macros/s/AKfycbzoYf0qQ4e2fQwWqtkTuDZn81HD30OKQQ2bAs6QRjHAZXskXlYeaO456jFlusvn0fZT/exec"
+			>
+				<div class="form-checkbox"></div>
+				<div class="form-information">
+					<font size="50" class="form-title" style="text-align: center"
+						>ID INFORMATION</font
+					>
+					<label for="student-number">Student Number:</label>
+					<input
+						type="text"
+						name="student-number"
+						id="student-number"
+						required
+					/><br />
+					<label for="first-name">First Name:</label>
+					<input type="text" name="first-name" id="first-name" required /><br />
+					<label for="middle-name">Middle Name:</label>
+					<input
+						type="text"
+						name="middle-name"
+						id="middle-name"
+						required
+					/><br />
+					<label for="last-name">Last Name:</label>
+					<input type="text" name="last-name" id="last-name" required /><br />
+					<label for="gender">Gender:</label>
+					<select name="gender" id="gender" required>
+						<option value="" disabled selected>Select Gender</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option></select
+					><br />
+					<label for="date-of-birth" required>Date of Birth:</label>
+					<input type="date" name="date-of-birth" id="date-of-birth" /><br />
+					<label for="college" required>College:</label>
+					<input type="text" name="college" id="college" /><br />
+					<label for="course-yr-sec" required>Course, Yr. & Section:</label>
+					<input type="text" name="course-yr-sec" id="course-yr-sec" /><br />
+					<label for="address" required>Home Address:</label>
+					<input type="text" name="address" id="address" /><br />
+					<label for="tel-no" required>Phone/Mobile No.:</label>
+					<input type="text" name="tel-no" id="tel-no" /><br />
+					<label for="email" required>Email Address:</label>
+					<input type="email" name="email" id="email" /><br />
+					<p>In case of emergency, please notify:</p>
+					<label for="em-name" required>Complete Name:</label>
+					<input type="text" name="em-name" id="em-name" /><br />
+					<label for="em-tel-no" required>Phone/Mobile No.:</label>
+					<input type="text" name="em-tel-no" id="em-tel-no" /><br />
+					<label for="em-address" required>Address:</label>
+					<input type="text" name="em-address" id="em-address" /><br />
+					<input class="button" type="submit" />
+				</div>
+			</form>
+		</div>
 
-    <div class="navbar">
-        <div class="logo-head">
-            <img src="assets/logo.png" alt="puplogo" class="logo" />
-            <div class="logo-title">
-                <h1>
-                    POLYTECHNIC UNIVERSITY OF<br />
-                    THE PHILIPPINES
-                </h1>
-                <h3>The Country’s First Polytechnic University</h3>
-            </div>
-        </div>
-        <div class="nav-links">
-            <h2>
-                <a href="index.html">HOME</a>
-                <a href="privacy.html">FORMS</a>
-                <a href="https://www.pup.edu.ph">PUP WEBSITE</a>
-            </h2>
-        </div>
-    </div>
-    <div class="application-form">
-        <form method="post" action="https://script.google.com/macros/s/AKfycbzoYf0qQ4e2fQwWqtkTuDZn81HD30OKQQ2bAs6QRjHAZXskXlYeaO456jFlusvn0fZT/exec">
-            <div class="form-checkbox"></div>
-            <div class="form-information">
-                <font size="50" class="form-title" style="text-align: center;">ID INFORMATION</font>
-                <label for="student-number">Student Number:</label>
-                <input type="text" name="student-number" id="student-number" required/><br>
-                <label for="first-name">First Name:</label>
-                <input type="text" name="first-name" id="first-name" required/><br>
-                <label for="middle-name">Middle Name:</label>
-                <input type="text" name="middle-name" id="middle-name" required/><br>
-                <label for="last-name">Last Name:</label>
-                <input type="text" name="last-name" id="last-name" required/><br>
-                <label for="gender">Gender:</label>
-                <select name="gender" id="gender" required>
-                    <option value="" disabled selected>Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select><br>
-                <label for="date-of-birth" required>Date of Birth:</label>
-                <input type="date" name="date-of-birth" id="date-of-birth" /><br>
-                <label for="college" required>College:</label>
-                <input type="text" name="college" id="college" /><br>
-                <label for="course-yr-sec" required>Course, Yr. & Section:</label>
-                <input type="text" name="course-yr-sec" id="course-yr-sec" /><br>
-                <label for="address" required>Home Address:</label>
-                <input type="text" name="address" id="address" /><br>
-                <label for="tel-no" required>Phone/Mobile No.:</label>
-                <input type="text" name="tel-no" id="tel-no" /><br>
-                <label for="email" required>Email Address:</label>
-                <input type="email" name="email" id="email" /><br>
-                <p>In case of emergency, please notify:</p>
-                <label for="em-name" required>Complete Name:</label>
-                <input type="text" name="em-name" id="em-name" /><br>
-                <label for="em-tel-no" required>Phone/Mobile No.:</label>
-                <input type="text" name="em-tel-no" id="em-tel-no" /><br>
-                <label for="em-address" required>Address:</label>
-                <input type="text" name="em-address" id="em-address" /><br>
-                <input class="button" type="submit" />
-            </div>
-        </form>
-    </div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				var modal = document.getElementById("myModal");
+				var proceedBtn = document.getElementById("proceedBtn");
+				var reasonRadios = document.querySelectorAll(".reason");
+				var academicLevelRadios = document.querySelectorAll(".academic-level");
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var modal = document.getElementById("myModal");
-        var proceedBtn = document.getElementById("proceedBtn");
-        var reasonCheckboxes = document.querySelectorAll('.reason');
-        var academicLevelCheckboxes = document.querySelectorAll('.academic-level');
+				function checkSelection() {
+					var reasonSelected = Array.from(reasonRadios).some(
+						(radio) => radio.checked
+					);
+					var academicLevelSelected = Array.from(academicLevelRadios).some(
+						(radio) => radio.checked
+					);
+					proceedBtn.disabled = !(reasonSelected && academicLevelSelected);
+				}
 
-        function checkSelection() {
-            var reasonSelected = Array.from(reasonCheckboxes).some(checkbox => checkbox.checked);
-            var academicLevelSelected = Array.from(academicLevelCheckboxes).some(checkbox => checkbox.checked);
-            proceedBtn.disabled = !(reasonSelected && academicLevelSelected);
-        }
+				reasonRadios.forEach(function (radio) {
+					radio.addEventListener("change", checkSelection);
+				});
 
-        reasonCheckboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', checkSelection);
-        });
+				academicLevelRadios.forEach(function (radio) {
+					radio.addEventListener("change", checkSelection);
+				});
 
-        academicLevelCheckboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', checkSelection);
-        });
-
-        proceedBtn.addEventListener('click', function() {
-            modal.style.display = "none";
-        });
-    });
-</script>
-</body>
+				proceedBtn.addEventListener("click", function () {
+					modal.style.display = "none";
+				});
+			});
+		</script>
+	</body>
 </html>
